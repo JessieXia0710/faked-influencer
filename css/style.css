@@ -36,6 +36,13 @@ body {
     margin: auto;
 }
 
+#chat-container {
+    background-color: pink;
+    width: 35%;
+    height: 100%;
+    margin: auto;
+}
+
 .content-box {
     position: absolute;
     left: 50%;
@@ -273,40 +280,25 @@ body {
 }
 
 .message {
-    display: flex;
-    flex-direction: column;
-    font-family: "SanFrancisco";
-    font-size: 1.25rem;
-    margin: 0 auto 1rem;
-    max-width: 600px;
-    padding: 0.25rem 0.875rem;
-}
-
-.message p {
-    border-radius: 1.15rem;
-    line-height: 1.25;
-    max-width: 75%;
-    padding: 0.5rem .875rem;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
     position: relative;
-    word-wrap: break-word;
+    max-width: 80%;
 }
 
-p.from-me {
+.message.incoming {
+    background-color: #e0e0e0;
+    align-self: flex-start;
+    top: 10px;
+    left: 60px;
+}
+
+.message.outgoing {
+    background-color: #f0f0f0;
     align-self: flex-end;
-    background-color: #248bf5;
-    color: #fff;
-    font-size: 15px;
-}
-
-p.from-them {
-    align-items: flex-start;
-    background-color: #e5e5ea;
-    color: #000;
-    font-size: 15px;
-}
-
-.message p {
-    margin: 0.5rem 0;
+    left: 20px;
+    top: 10px;
 }
 
 .post {
@@ -315,6 +307,18 @@ p.from-them {
     min-height: 400px;
     left: 30px;
     top: 30px;
+    background: #fff;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.textbox {
+    position: absolute;
+    width: 360px;
+    min-height: 400px;
+    right: 30px;
+    bottom: 30px;
     background: #fff;
     box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
     padding: 20px;

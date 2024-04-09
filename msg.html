@@ -15,13 +15,46 @@
 
 <body>
     <div class="main-container">
-        <div id="screen-container">
-            <div class="message">
-                <p class="from-them">someone sends you message</p>
-                <p class="from-me">you reply</p>
-            </div>
+        <div id="chat-container">
+            <div class="message incoming">Hi.</div>
+            <div class="message outgoing">Hello.</div>
         </div>
-        <a href="index.html">home</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var chatContainer = document.getElementById("chat-container");
+            var messages = [
+                "send1",
+                "receive1",
+                "send2",
+            ];
+            var messageIndex = 0;
+
+            chatContainer.addEventListener("click", function () {
+                if (messageIndex < messages.length) {
+                    var messageContent = messages[messageIndex];
+                    if (messageIndex % 2 === 0) {
+                        var incomingMessage = document.createElement("div");
+                        incomingMessage.textContent = messageContent;
+                        incomingMessage.classList.add("message", "incoming");
+                        chatContainer.appendChild(incomingMessage);
+                    } else {
+                        var outgoingMessage = document.createElement("div");
+                        outgoingMessage.textContent = messageContent;
+                        outgoingMessage.classList.add("message", "outgoing");
+                        chatContainer.appendChild(outgoingMessage);
+                    }
+                    messageIndex++;
+                } else {
+                    alert("chat ends");
+                }
+            });
+        });
+    </script>
+
+    <a href="index.html">home</a>
+
 </body>
 
 </html>
