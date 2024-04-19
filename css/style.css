@@ -34,6 +34,8 @@ body {
     width: 35%;
     height: 100%;
     margin: auto;
+    border-radius: 5px;
+    overflow-y: auto;
 }
 
 #chat-container {
@@ -41,6 +43,7 @@ body {
     width: 35%;
     height: 100%;
     margin: auto;
+    overflow-y: auto;
 }
 
 .content-box {
@@ -217,7 +220,6 @@ body {
     top: 150px;
     left: 30%;
     width: 28%;
-    height: 75px;
     color: black;
     border-radius: 4px;
     background-color: white;
@@ -230,7 +232,6 @@ body {
     top: 300px;
     right: 10%;
     width: 28%;
-    height: 75px;
     color: black;
     border-radius: 4px;
     background-color: white;
@@ -243,7 +244,6 @@ body {
     bottom: 100px;
     left: 35%;
     width: 28%;
-    height: 75px;
     color: black;
     border-radius: 4px;
     background-color: white;
@@ -277,6 +277,7 @@ body {
     font-size: 14px;
     right: 3px;
     top: 3px;
+    margin-bottom: 3px;
 }
 
 .message {
@@ -287,14 +288,14 @@ body {
     max-width: 80%;
 }
 
-.message.incoming {
+.message.a {
     background-color: #e0e0e0;
     align-self: flex-start;
     top: 10px;
     left: 60px;
 }
 
-.message.outgoing {
+.message.b {
     background-color: #f0f0f0;
     align-self: flex-end;
     left: 20px;
@@ -306,11 +307,22 @@ body {
     width: 360px;
     min-height: 400px;
     left: 30px;
-    top: 30px;
+    top: 100px;
     background: #fff;
     box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
     padding: 20px;
     border-radius: 5px;
+}
+
+.post-image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .textbox {
@@ -318,7 +330,7 @@ body {
     width: 360px;
     min-height: 400px;
     right: 30px;
-    bottom: 30px;
+    bottom: 100px;
     background: #fff;
     box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
     padding: 20px;
@@ -364,4 +376,42 @@ body {
 
 .comments {
     color: darkgray;
+}
+
+.bubble {
+    position: absolute;
+    width: 380px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bubble-left {
+    bottom: 80px;
+    left: 20px;
+}
+
+.bubble-right {
+    top: 80px;
+    right: 20px;
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.bubble-left::before {
+    border-color: white transparent transparent transparent;
+    top: 100%;
+    left: 10%;
+}
+
+.bubble-right::before {
+    border-color: white transparent transparent transparent;
+    bottom: 100%;
+    left: 10%;
 }

@@ -13,7 +13,20 @@
 </head>
 
 <div class="main-container">
-    <div id="screen-container">
+
+    <div class="bubble bubble-left">
+        <p>"How does she do it? How does she make everything look so flawless and perfect?"</p>
+    </div>
+    <div class="bubble bubble-right">
+        <p>"Wow, look at those numbers. It's incredible how much engagement she gets on every single post."</p>
+    </div>
+
+    <div id="chat-container">
+
+        <div class="message a">Hey, Ava. Your content is amazing, and I was
+            wondering if you had any tips for me?</div>
+        <div class="message b">Hi, I'm glad to help. Maybe it's time to craft a more compelling persona?</div>
+
     </div>
 </div>
 
@@ -25,7 +38,7 @@
         <h3>username<br><span>handle</span></h3>
     </div>
     <div class="post-image">
-        <img src="" alt="post img" class="post-img">
+        <img src="image/postimage1.png" alt="post img" class="post-img">
     </div>
     <h3 class="likes">1,805 likes</h3>
     <h3 class="post-content">
@@ -43,7 +56,7 @@
         <h3>username<br><span>handle</span></h3>
     </div>
     <div class="post-image">
-        <img src="" alt="post img" class="post-img">
+        <img src="image/postimage2.png" alt="post img" class="post-img">
     </div>
     <h3 class="likes">1,805 likes</h3>
     <h3 class="post-content">
@@ -55,9 +68,33 @@
 
 <body>
 
-    <a href="index.html">home</a>
-    <script src="js/script.js"></script>
+    <a href="index.html" style="position: fixed; bottom: 0; left: 0;">home</a>
 
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var
+            chatContainer = document.getElementById("chat-container");
+        var messages = [" I've been thinking about it, but I'm not sure where to start.", "How about we create a story where you're this badass independent woman who just went through a breakup? Trust me, it'll catch fire.", "Sounds cool, but I'm not dating anyone right now.", "No worries. Everything online is a mix of truth and fiction. You don't need to *actually* have a boyfriend, just like you don't need to *actually* go through a breakup have a boyfriend.", "Is this really a good idea? Won't we get caught for faking it?", "Don't worry, I'll make sure everything is seamless and flawless.", "Well...anyway, thanks for your idea."];
+        var
+            messageIndex = 0; chatContainer.addEventListener("click", function () {
+                if (messageIndex < messages.length) {
+                    var
+                        messageContent = messages[messageIndex]; if (messageIndex % 2 === 0) {
+                            var
+                                aMessage = document.createElement("div"); aMessage.textContent = messageContent;
+                            aMessage.classList.add("message", "a"); chatContainer.appendChild(aMessage);
+                        } else {
+                        var
+                            bMessage = document.createElement("div"); bMessage.textContent = messageContent;
+                        bMessage.classList.add("message", "b"); chatContainer.appendChild(bMessage);
+                    }
+                    messageIndex++;
+                } else { alert("chat ends"); }
+            });
+    });
+
+</script>
 
 </html>

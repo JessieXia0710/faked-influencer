@@ -16,45 +16,37 @@
 <body>
     <div class="main-container">
         <div id="chat-container">
-            <div class="message incoming">Hi.</div>
-            <div class="message outgoing">Hello.</div>
+            <div class="message a">Hey, Claire.</div>
+            <div class="message b">Hey honey, how's it going?</div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var chatContainer = document.getElementById("chat-container");
-            var messages = [
-                "send1",
-                "receive1",
-                "send2",
-            ];
-            var messageIndex = 0;
+    <a href="index.html" style="position: fixed; bottom: 0; left: 0;">home</a>
+</body>
 
-            chatContainer.addEventListener("click", function () {
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var
+            chatContainer = document.getElementById("chat-container");
+        var messages = ["To be honest, I'm feeling frustrated.", "What's on your mind?", "My post engagement hasn't been improving. It feels like I'm stuck.", "I hear you. Maybe it's time to shake things up a bit.", "What do you mean?", "Your persona lacks uniqueness, and your content needs a compelling story.", "But I've been trying so hard.", "I know, but sometimes, we need a fresh perspective. How about learning from the best?", "Learn from who?", "You know Ava, our company's top influencer? You should DM her for advice.", "Sounds like a great idea. Thanks, Claire."];
+        var
+            messageIndex = 0; chatContainer.addEventListener("click", function () {
                 if (messageIndex < messages.length) {
-                    var messageContent = messages[messageIndex];
-                    if (messageIndex % 2 === 0) {
-                        var incomingMessage = document.createElement("div");
-                        incomingMessage.textContent = messageContent;
-                        incomingMessage.classList.add("message", "incoming");
-                        chatContainer.appendChild(incomingMessage);
-                    } else {
-                        var outgoingMessage = document.createElement("div");
-                        outgoingMessage.textContent = messageContent;
-                        outgoingMessage.classList.add("message", "outgoing");
-                        chatContainer.appendChild(outgoingMessage);
+                    var
+                        messageContent = messages[messageIndex]; if (messageIndex % 2 === 0) {
+                            var
+                                aMessage = document.createElement("div"); aMessage.textContent = messageContent;
+                            aMessage.classList.add("message", "a"); chatContainer.appendChild(aMessage);
+                        } else {
+                        var
+                            bMessage = document.createElement("div"); bMessage.textContent = messageContent;
+                        bMessage.classList.add("message", "b"); chatContainer.appendChild(bMessage);
                     }
                     messageIndex++;
-                } else {
-                    alert("chat ends");
-                }
+                } else { alert("chat ends"); }
             });
-        });
-    </script>
+    });
 
-    <a href="index.html">home</a>
-
-</body>
+</script>
 
 </html>

@@ -10,9 +10,73 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.js"></script>
 
     <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            /* Disable Scroll */
+            overflow: hidden;
+        }
+
+        div {
+            height: 100%;
+        }
+
+        .step {
+            top: 200px;
+        }
+    </style>
+
 </head>
 
-<h1>episode2</h1>
+<div id="sleep" class="step" data-x="-1000" data-y="-1500">
+
+    <h2>After the conversation with Ava, you couldn't shake off the
+        <a href="#excitement" style="display: inline; margin: 0;">excitement</a>
+        and
+        <a href="#apprehension" style="display: inline; margin: 0;">apprehension</a> swirling in your mind.
+    </h2>
+
+</div>
+
+<div id="excitement" class="step" data-x="0" data-y="-1500">
+    <h2>That sounds intriguing, everything on social media can be curated.</h2>
+    <h2><a href="#but1"> But...</a></h2>
+</div>
+
+<div id="apprehension" class="step" data-x="0" data-y="-1500" data-z="1500">
+    <h2>"Crafting a story to fame... It sounds thrilling, but is it really the right path? Do I want to build my success
+        on a lie?"</h2>
+    <h2><a href="#but"> But then again...</a></h2>
+</div>
+
+<div id="but" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+    <h2>"Everyone embellishes a little, right? Maybe this is just the push I need to take my career to the next level."
+    </h2>
+    <h2>Your decision is <a href="#decision">...</a></h2>
+</div>
+
+<div id="but1" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+    <h2>"But is it really the right path? Can I live with myself knowing I'm deceiving my followers?"
+    </h2>
+    <h2>Your decision is <a href="#decision">...</a></h2>
+</div>
+
+<div id="decision" class="step">
+    <h2>You found yourself torn between your desire for recognition and your moral compass, unsure of which path to
+        take.
+    </h2>
+    <h2>Your final decision is</h2>
+    <h2><a href="#end1">continue with your current approach, rejecting Ava's advice.</a></h2>
+    <h2><a href="#episode2">follow Ava's advice</a></h2>
+</div>
+
+<div id="end1">
+    <p>end 1</p>
+</div>
+
+<div id="episode2">here comes episode 2</div>
 
 <body>
 

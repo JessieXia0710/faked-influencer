@@ -1,0 +1,10 @@
+html,
+body {
+    height: 100%;
+    /* Disable Scroll */
+    overflow: hidden;
+}
+
+.step {
+    height: 100%;
+}

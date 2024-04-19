@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/react.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.js"></script>
 
@@ -13,7 +13,173 @@
 </head>
 
 <body>
+    <div class="main-container">
+        <div id="screen-container">
+
+            <div class="notifications">
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@SocialButterfly22 liked your post.</p>
+                        <p class="notification-time">2 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@Gracie-Gabz902 liked your post.</p>
+                        <p class="notification-time">5 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@VibrantVoyager liked your post.</p>
+                        <p class="notification-time">6 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@Galaxy_Girl_9 liked your post.</p>
+                        <p class="notification-time">8 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@Luna_Lover-88 liked your post.</p>
+                        <p class="notification-time">8 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@HanWithHanny liked your post.</p>
+                        <p class="notification-time">9 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@elleluvslyfe liked your post.</p>
+                        <p class="notification-time">11 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@lilyinBliss liked your post.</p>
+                        <p class="notification-time">12 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@wanderlust_7 liked your post.</p>
+                        <p class="notification-time">12 minutes ago</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"></div>
+                    <div class="notification-content">
+                        <p class="notification-message">@TranquilSoul1 liked your post.</p>
+                        <p class="notification-time">15 minutes ago</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="top">
+            <div class="top-profile">
+                <img src="" alt="profile img" class="top-profile-img">
+            </div>
+            <h3>username<br><span>handle</span></h3>
+        </div>
+        <div class="post-image">
+            <img src="" alt="post img" class="post-img">
+        </div>
+        <h3 class="likes">261 likes</h3>
+        <h3 class="post-content">
+            <b>username:</b>
+            the content of the post
+        </h3>
+        <h3 class="comments">view all 47 comments</h3>
+    </div>
+
+    <div id="text-container">
+        <h2>As you scrolled through your phone, a mix of emotions washed over you.</h2>
+        <ul>
+            <li><a href="#261likes" onclick="showContent('261likes')">"261 likes..."</a></li>
+        </ul>
+
+        <div id="261likes" style="display: none;">
+            <h2>you muttered to herself, your initial reaction one of mild satisfaction, because of</h2>
+            <ul>
+                <li><a href="#likesnum" onclick="showContent('likesnum')">the number of likes</a></li>
+                <li><a href="#loyalfol" onclick="showContent('loyalfol')">the loyal fans</a></li>
+            </ul>
+        </div>
+
+        <div id="likesnum" style="display: none;">
+            <h2>After all, 261 was a decent enough number, nothing extraordinary but still respectable.</h2>
+            <h2>Yet, as you delved into your thoughts, a sense of
+                <ul style="display: inline; margin: 0;">
+                    <li style="display: inline; margin: 0;"><a href="#disappointment"
+                            onclick="showContent('disappointment')">disappoinment</a></li>
+                </ul>
+                <span style="margin: 0; padding: 0;">crept in.</span>
+            </h2>
+        </div>
+
+        <div id="loyalfol" style="display: none;">
+            <h2>Some familiar IDs popped up, providing a comforting sense of support.</h2>
+            <h2>Yet, as you delved into your thoughts, a sense of
+                <ul style="display: inline; margin: 0;">
+                    <li style="display: inline; margin: 0;"><a href="#disappointment"
+                            onclick="showContent('disappointment')">disappoinment</a></li>
+                </ul>
+                <span style="margin: 0; padding: 0;">crept in.</span>
+            </h2>
+        </div>
+
+        <div id="disappointment" style="display: none;">
+            <h2>The new post was meticulously crafted with hours of effort, yet the likes seemed stagnant, almost
+                <ul style="display: inline; margin: 0;">
+                    <li style="display: inline; margin: 0;"><a href="#mocking" onclick="showContent('mocking')">mocking
+                            your efforts.</a></li>
+                </ul>
+            </h2>
+        </div>
+
+        <div id="mocking" style="display: none;">
+            <h2>
+                It was as if you hadn't progressed at all since you first embarked on your journey as an influencer.
+            </h2>
+            <h2>
+                You wondered silently,
+            </h2>
+            <ul>
+                <li><a href="#wrong" onclick="showContent('wrong')">"What am I doing wrong?"</a></li>
+                <li><a href="#wrong" onclick="showContent('wrong')">"I won't let this setback define me."</a></li>
+            </ul>
+        </div>
+
+        <div id="wrong" style="display: none;">
+            <h2>You decided to take a moment to check the comments on your latest post.</h2>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+            </ul>
+        </div>
+    </div>
 
 </body>
+
+<a href="index.html" style="position: fixed; bottom: 0; left: 0;">home</a>
+
+<script src="js/react.js"></script>
 
 </html>
